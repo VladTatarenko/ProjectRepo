@@ -96,54 +96,54 @@
             // idTeacherLabel
             // 
             idTeacherLabel.AutoSize = true;
-            idTeacherLabel.Location = new System.Drawing.Point(45, 34);
+            idTeacherLabel.Location = new System.Drawing.Point(52, 29);
             idTeacherLabel.Name = "idTeacherLabel";
-            idTeacherLabel.Size = new System.Drawing.Size(75, 13);
+            idTeacherLabel.Size = new System.Drawing.Size(74, 15);
             idTeacherLabel.TabIndex = 1;
             idTeacherLabel.Text = "Id викладача:";
             // 
             // fullNameLabel
             // 
             fullNameLabel.AutoSize = true;
-            fullNameLabel.Location = new System.Drawing.Point(56, 70);
+            fullNameLabel.Location = new System.Drawing.Point(352, 29);
             fullNameLabel.Name = "fullNameLabel";
-            fullNameLabel.Size = new System.Drawing.Size(63, 13);
+            fullNameLabel.Size = new System.Drawing.Size(63, 15);
             fullNameLabel.TabIndex = 3;
             fullNameLabel.Text = "Повне ім\'я:";
             // 
             // identification_codeLabel
             // 
             identification_codeLabel.AutoSize = true;
-            identification_codeLabel.Location = new System.Drawing.Point(5, 132);
+            identification_codeLabel.Location = new System.Drawing.Point(635, 29);
             identification_codeLabel.Name = "identification_codeLabel";
-            identification_codeLabel.Size = new System.Drawing.Size(117, 13);
+            identification_codeLabel.Size = new System.Drawing.Size(117, 15);
             identification_codeLabel.TabIndex = 5;
             identification_codeLabel.Text = "Ідентифікаційний код:";
             // 
             // homeAddressLabel
             // 
             homeAddressLabel.AutoSize = true;
-            homeAddressLabel.Location = new System.Drawing.Point(16, 158);
+            homeAddressLabel.Location = new System.Drawing.Point(647, 75);
             homeAddressLabel.Name = "homeAddressLabel";
-            homeAddressLabel.Size = new System.Drawing.Size(104, 13);
+            homeAddressLabel.Size = new System.Drawing.Size(106, 15);
             homeAddressLabel.TabIndex = 7;
             homeAddressLabel.Text = "Місце проживання:";
             // 
             // phoneNumberLabel
             // 
             phoneNumberLabel.AutoSize = true;
-            phoneNumberLabel.Location = new System.Drawing.Point(25, 184);
+            phoneNumberLabel.Location = new System.Drawing.Point(30, 118);
             phoneNumberLabel.Name = "phoneNumberLabel";
-            phoneNumberLabel.Size = new System.Drawing.Size(95, 13);
+            phoneNumberLabel.Size = new System.Drawing.Size(95, 15);
             phoneNumberLabel.TabIndex = 9;
             phoneNumberLabel.Text = "Номер телефону:";
             // 
             // passportLabel
             // 
             passportLabel.AutoSize = true;
-            passportLabel.Location = new System.Drawing.Point(68, 106);
+            passportLabel.Location = new System.Drawing.Point(80, 72);
             passportLabel.Name = "passportLabel";
-            passportLabel.Size = new System.Drawing.Size(53, 13);
+            passportLabel.Size = new System.Drawing.Size(53, 15);
             passportLabel.TabIndex = 12;
             passportLabel.Text = "Паспорт:";
             // 
@@ -171,14 +171,14 @@
             this.toolStripLabel1,
             this.toolStripButton1,
             this.toolStripSeparator2});
-            this.teachersBindingNavigator.Location = new System.Drawing.Point(2, 0);
+            this.teachersBindingNavigator.Location = new System.Drawing.Point(10, 377);
             this.teachersBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.teachersBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.teachersBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.teachersBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.teachersBindingNavigator.Name = "teachersBindingNavigator";
             this.teachersBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.teachersBindingNavigator.Size = new System.Drawing.Size(368, 25);
+            this.teachersBindingNavigator.Size = new System.Drawing.Size(376, 25);
             this.teachersBindingNavigator.TabIndex = 0;
             this.teachersBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -315,41 +315,41 @@
             // idTeacherTextBox
             // 
             this.idTeacherTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.teachersBindingSource, "IdTeacher", true));
-            this.idTeacherTextBox.Location = new System.Drawing.Point(126, 31);
+            this.idTeacherTextBox.Location = new System.Drawing.Point(147, 25);
             this.idTeacherTextBox.Name = "idTeacherTextBox";
-            this.idTeacherTextBox.Size = new System.Drawing.Size(159, 20);
+            this.idTeacherTextBox.Size = new System.Drawing.Size(185, 21);
             this.idTeacherTextBox.TabIndex = 2;
             // 
             // identification_codeTextBox
             // 
             this.identification_codeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.teachersBindingSource, "Identification code", true));
-            this.identification_codeTextBox.Location = new System.Drawing.Point(126, 129);
+            this.identification_codeTextBox.Location = new System.Drawing.Point(776, 25);
             this.identification_codeTextBox.Name = "identification_codeTextBox";
-            this.identification_codeTextBox.Size = new System.Drawing.Size(159, 20);
+            this.identification_codeTextBox.Size = new System.Drawing.Size(185, 21);
             this.identification_codeTextBox.TabIndex = 6;
             this.identification_codeTextBox.TextChanged += new System.EventHandler(this.identification_codeTextBox_TextChanged);
             // 
             // homeAddressTextBox
             // 
             this.homeAddressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.teachersBindingSource, "HomeAddress", true));
-            this.homeAddressTextBox.Location = new System.Drawing.Point(126, 155);
+            this.homeAddressTextBox.Location = new System.Drawing.Point(776, 72);
             this.homeAddressTextBox.Name = "homeAddressTextBox";
-            this.homeAddressTextBox.Size = new System.Drawing.Size(159, 20);
+            this.homeAddressTextBox.Size = new System.Drawing.Size(185, 21);
             this.homeAddressTextBox.TabIndex = 8;
             // 
             // phoneNumberTextBox
             // 
             this.phoneNumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.teachersBindingSource, "PhoneNumber", true));
-            this.phoneNumberTextBox.Location = new System.Drawing.Point(126, 181);
+            this.phoneNumberTextBox.Location = new System.Drawing.Point(148, 114);
             this.phoneNumberTextBox.Name = "phoneNumberTextBox";
-            this.phoneNumberTextBox.Size = new System.Drawing.Size(159, 20);
+            this.phoneNumberTextBox.Size = new System.Drawing.Size(185, 21);
             this.phoneNumberTextBox.TabIndex = 10;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(210, 207);
+            this.button1.Location = new System.Drawing.Point(874, 112);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(87, 27);
             this.button1.TabIndex = 11;
             this.button1.Text = "На головну";
             this.button1.UseVisualStyleBackColor = true;
@@ -358,18 +358,18 @@
             // fullNameRichTextBox
             // 
             this.fullNameRichTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.teachersBindingSource, "FullName", true));
-            this.fullNameRichTextBox.Location = new System.Drawing.Point(125, 57);
+            this.fullNameRichTextBox.Location = new System.Drawing.Point(433, 14);
             this.fullNameRichTextBox.Name = "fullNameRichTextBox";
-            this.fullNameRichTextBox.Size = new System.Drawing.Size(160, 40);
+            this.fullNameRichTextBox.Size = new System.Drawing.Size(186, 46);
             this.fullNameRichTextBox.TabIndex = 12;
             this.fullNameRichTextBox.Text = "";
             // 
             // passportTextBox
             // 
             this.passportTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.teachersBindingSource, "Passport", true));
-            this.passportTextBox.Location = new System.Drawing.Point(125, 103);
+            this.passportTextBox.Location = new System.Drawing.Point(147, 68);
             this.passportTextBox.Name = "passportTextBox";
-            this.passportTextBox.Size = new System.Drawing.Size(160, 20);
+            this.passportTextBox.Size = new System.Drawing.Size(186, 21);
             this.passportTextBox.TabIndex = 13;
             // 
             // teachersDataGridView
@@ -386,10 +386,10 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.teachersDataGridView.DataSource = this.teachersBindingSource;
-            this.teachersDataGridView.Location = new System.Drawing.Point(291, 28);
+            this.teachersDataGridView.Location = new System.Drawing.Point(199, 144);
             this.teachersDataGridView.Name = "teachersDataGridView";
             this.teachersDataGridView.ReadOnly = true;
-            this.teachersDataGridView.Size = new System.Drawing.Size(653, 199);
+            this.teachersDataGridView.Size = new System.Drawing.Size(762, 230);
             this.teachersDataGridView.TabIndex = 14;
             // 
             // dataGridViewTextBoxColumn1
@@ -445,9 +445,9 @@
             this.passportToolStripLabel,
             this.passportToolStripTextBox,
             this.searchTeachToolStripButton});
-            this.searchTeachToolStrip.Location = new System.Drawing.Point(370, 0);
+            this.searchTeachToolStrip.Location = new System.Drawing.Point(440, 377);
             this.searchTeachToolStrip.Name = "searchTeachToolStrip";
-            this.searchTeachToolStrip.Size = new System.Drawing.Size(574, 25);
+            this.searchTeachToolStrip.Size = new System.Drawing.Size(622, 25);
             this.searchTeachToolStrip.TabIndex = 15;
             this.searchTeachToolStrip.Text = "searchTeachToolStrip";
             // 
@@ -504,9 +504,10 @@
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(956, 240);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(1115, 414);
             this.Controls.Add(this.searchTeachToolStrip);
             this.Controls.Add(this.teachersDataGridView);
             this.Controls.Add(passportLabel);
@@ -523,6 +524,7 @@
             this.Controls.Add(idTeacherLabel);
             this.Controls.Add(this.idTeacherTextBox);
             this.Controls.Add(this.teachersBindingNavigator);
+            this.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Name = "Form2";
             this.Text = "Викладачі";
             this.Load += new System.EventHandler(this.Form2_Load);
