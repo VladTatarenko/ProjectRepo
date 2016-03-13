@@ -60,6 +60,11 @@
             this.phoneNumberTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.studentsDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.searchStudToolStrip = new System.Windows.Forms.ToolStrip();
             this.idStudentToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.idStudentToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
@@ -71,11 +76,6 @@
             this.passportTextBox = new System.Windows.Forms.TextBox();
             this.studentsTableAdapter = new DataBase.DataSet2TableAdapters.StudentsTableAdapter();
             this.tableAdapterManager = new DataBase.DataSet2TableAdapters.TableAdapterManager();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             idStudentLabel = new System.Windows.Forms.Label();
             fullNameLabel = new System.Windows.Forms.Label();
             homeAddressLabel = new System.Windows.Forms.Label();
@@ -92,45 +92,45 @@
             // idStudentLabel
             // 
             idStudentLabel.AutoSize = true;
-            idStudentLabel.Location = new System.Drawing.Point(47, 31);
+            idStudentLabel.Location = new System.Drawing.Point(47, 28);
             idStudentLabel.Name = "idStudentLabel";
-            idStudentLabel.Size = new System.Drawing.Size(67, 13);
+            idStudentLabel.Size = new System.Drawing.Size(74, 14);
             idStudentLabel.TabIndex = 1;
             idStudentLabel.Text = "Id студента:";
             // 
             // fullNameLabel
             // 
             fullNameLabel.AutoSize = true;
-            fullNameLabel.Location = new System.Drawing.Point(55, 68);
+            fullNameLabel.Location = new System.Drawing.Point(317, 28);
             fullNameLabel.Name = "fullNameLabel";
-            fullNameLabel.Size = new System.Drawing.Size(63, 13);
+            fullNameLabel.Size = new System.Drawing.Size(62, 14);
             fullNameLabel.TabIndex = 3;
             fullNameLabel.Text = "Повне ім\'я:";
             // 
             // homeAddressLabel
             // 
             homeAddressLabel.AutoSize = true;
-            homeAddressLabel.Location = new System.Drawing.Point(10, 129);
+            homeAddressLabel.Location = new System.Drawing.Point(10, 82);
             homeAddressLabel.Name = "homeAddressLabel";
-            homeAddressLabel.Size = new System.Drawing.Size(104, 13);
+            homeAddressLabel.Size = new System.Drawing.Size(103, 14);
             homeAddressLabel.TabIndex = 5;
             homeAddressLabel.Text = "Місце проживання:";
             // 
             // phoneNumberLabel
             // 
             phoneNumberLabel.AutoSize = true;
-            phoneNumberLabel.Location = new System.Drawing.Point(19, 155);
+            phoneNumberLabel.Location = new System.Drawing.Point(544, 82);
             phoneNumberLabel.Name = "phoneNumberLabel";
-            phoneNumberLabel.Size = new System.Drawing.Size(95, 13);
+            phoneNumberLabel.Size = new System.Drawing.Size(95, 14);
             phoneNumberLabel.TabIndex = 7;
             phoneNumberLabel.Text = "Номер телефону:";
             // 
             // passportLabel
             // 
             passportLabel.AutoSize = true;
-            passportLabel.Location = new System.Drawing.Point(63, 103);
+            passportLabel.Location = new System.Drawing.Point(588, 28);
             passportLabel.Name = "passportLabel";
-            passportLabel.Size = new System.Drawing.Size(53, 13);
+            passportLabel.Size = new System.Drawing.Size(57, 14);
             passportLabel.TabIndex = 13;
             passportLabel.Text = "Паспорт:";
             // 
@@ -158,7 +158,7 @@
             this.toolStripLabel1,
             this.toolStripButton1,
             this.toolStripSeparator2});
-            this.studentsBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.studentsBindingNavigator.Location = new System.Drawing.Point(1, 296);
             this.studentsBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.studentsBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.studentsBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -302,7 +302,7 @@
             // idStudentTextBox
             // 
             this.idStudentTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentsBindingSource, "IdStudent", true));
-            this.idStudentTextBox.Location = new System.Drawing.Point(120, 28);
+            this.idStudentTextBox.Location = new System.Drawing.Point(120, 25);
             this.idStudentTextBox.Name = "idStudentTextBox";
             this.idStudentTextBox.Size = new System.Drawing.Size(154, 20);
             this.idStudentTextBox.TabIndex = 2;
@@ -310,16 +310,16 @@
             // fullNameRichTextBox
             // 
             this.fullNameRichTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentsBindingSource, "FullName", true));
-            this.fullNameRichTextBox.Location = new System.Drawing.Point(120, 54);
+            this.fullNameRichTextBox.Location = new System.Drawing.Point(382, 13);
             this.fullNameRichTextBox.Name = "fullNameRichTextBox";
-            this.fullNameRichTextBox.Size = new System.Drawing.Size(154, 40);
+            this.fullNameRichTextBox.Size = new System.Drawing.Size(154, 43);
             this.fullNameRichTextBox.TabIndex = 4;
             this.fullNameRichTextBox.Text = "";
             // 
             // homeAddressTextBox
             // 
             this.homeAddressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentsBindingSource, "HomeAddress", true));
-            this.homeAddressTextBox.Location = new System.Drawing.Point(120, 126);
+            this.homeAddressTextBox.Location = new System.Drawing.Point(120, 79);
             this.homeAddressTextBox.Name = "homeAddressTextBox";
             this.homeAddressTextBox.Size = new System.Drawing.Size(154, 20);
             this.homeAddressTextBox.TabIndex = 6;
@@ -327,16 +327,16 @@
             // phoneNumberTextBox
             // 
             this.phoneNumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentsBindingSource, "PhoneNumber", true));
-            this.phoneNumberTextBox.Location = new System.Drawing.Point(120, 152);
+            this.phoneNumberTextBox.Location = new System.Drawing.Point(645, 79);
             this.phoneNumberTextBox.Name = "phoneNumberTextBox";
             this.phoneNumberTextBox.Size = new System.Drawing.Size(154, 20);
             this.phoneNumberTextBox.TabIndex = 8;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(199, 178);
+            this.button1.Location = new System.Drawing.Point(208, 107);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 25);
             this.button1.TabIndex = 12;
             this.button1.Text = "На головну";
             this.button1.UseVisualStyleBackColor = true;
@@ -355,11 +355,46 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.studentsDataGridView.DataSource = this.studentsBindingSource;
-            this.studentsDataGridView.Location = new System.Drawing.Point(280, 28);
+            this.studentsDataGridView.Location = new System.Drawing.Point(147, 107);
             this.studentsDataGridView.Name = "studentsDataGridView";
             this.studentsDataGridView.ReadOnly = true;
-            this.studentsDataGridView.Size = new System.Drawing.Size(652, 173);
+            this.studentsDataGridView.Size = new System.Drawing.Size(652, 186);
             this.studentsDataGridView.TabIndex = 12;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdStudent";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id студента:";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "FullName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Повне ім\'я";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Passport";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Паспорт";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "HomeAddress";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Місце проживання";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "PhoneNumber";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Номер телефону";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // searchStudToolStrip
             // 
@@ -372,7 +407,7 @@
             this.passportToolStripLabel,
             this.passportToolStripTextBox,
             this.searchStudToolStripButton});
-            this.searchStudToolStrip.Location = new System.Drawing.Point(368, 0);
+            this.searchStudToolStrip.Location = new System.Drawing.Point(369, 296);
             this.searchStudToolStrip.Name = "searchStudToolStrip";
             this.searchStudToolStrip.Size = new System.Drawing.Size(564, 25);
             this.searchStudToolStrip.TabIndex = 13;
@@ -422,7 +457,7 @@
             // passportTextBox
             // 
             this.passportTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentsBindingSource, "Passport", true));
-            this.passportTextBox.Location = new System.Drawing.Point(120, 100);
+            this.passportTextBox.Location = new System.Drawing.Point(645, 25);
             this.passportTextBox.Name = "passportTextBox";
             this.passportTextBox.Size = new System.Drawing.Size(154, 20);
             this.passportTextBox.TabIndex = 14;
@@ -437,46 +472,12 @@
             this.tableAdapterManager.StudentsTableAdapter = this.studentsTableAdapter;
             this.tableAdapterManager.UpdateOrder = DataBase.DataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdStudent";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id студента:";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "FullName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Повне ім\'я";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Passport";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Паспорт";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "HomeAddress";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Місце проживання";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "PhoneNumber";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Номер телефону";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(937, 200);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(937, 332);
             this.Controls.Add(passportLabel);
             this.Controls.Add(this.passportTextBox);
             this.Controls.Add(this.searchStudToolStrip);
@@ -491,6 +492,7 @@
             this.Controls.Add(idStudentLabel);
             this.Controls.Add(this.idStudentTextBox);
             this.Controls.Add(this.studentsBindingNavigator);
+            this.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Name = "Form3";
             this.Text = "Студенти";
             this.Load += new System.EventHandler(this.Form3_Load);
