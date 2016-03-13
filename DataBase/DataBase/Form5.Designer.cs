@@ -35,10 +35,12 @@
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label label2;
             System.Windows.Forms.Label label3;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
             System.Windows.Forms.Label idListLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
             this.listOfStudyingBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.listOfStudyingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet3 = new DataBase.DataSet3();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -55,15 +57,38 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.listOfStudyingDataGridView = new System.Windows.Forms.DataGridView();
+            this.IdList = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idCourseTextBox = new System.Windows.Forms.TextBox();
             this.idStudentTextBox = new System.Windows.Forms.TextBox();
             this.idTeacherTextBox = new System.Windows.Forms.TextBox();
             this.studentsDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.teachersDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teachersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.coursesDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdTeacher = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdList = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coursesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idListTextBox = new System.Windows.Forms.TextBox();
             this.searchNewLIStToolStrip = new System.Windows.Forms.ToolStrip();
             this.idListToolStripLabel = new System.Windows.Forms.ToolStripLabel();
@@ -75,36 +100,12 @@
             this.idTeacherToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.idTeacherToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.searchNewLIStToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.listOfStudyingBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet3 = new DataBase.DataSet3();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coursesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teachersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.listOfStudyingTableAdapter = new DataBase.DataSet3TableAdapters.ListOfStudyingTableAdapter();
             this.tableAdapterManager = new DataBase.DataSet3TableAdapters.TableAdapterManager();
             this.coursesTableAdapter = new DataBase.DataSet3TableAdapters.CoursesTableAdapter();
             this.studentsTableAdapter = new DataBase.DataSet3TableAdapters.StudentsTableAdapter();
             this.teachersTableAdapter = new DataBase.DataSet3TableAdapters.TeachersTableAdapter();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             idCourseLabel = new System.Windows.Forms.Label();
             idStudentLabel = new System.Windows.Forms.Label();
             idTeacherLabel = new System.Windows.Forms.Label();
@@ -114,22 +115,23 @@
             idListLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listOfStudyingBindingNavigator)).BeginInit();
             this.listOfStudyingBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listOfStudyingDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentsDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teachersDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coursesDataGridView)).BeginInit();
-            this.searchNewLIStToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listOfStudyingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teachersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listOfStudyingDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teachersDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teachersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coursesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).BeginInit();
+            this.searchNewLIStToolStrip.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // idCourseLabel
             // 
             idCourseLabel.AutoSize = true;
-            idCourseLabel.Location = new System.Drawing.Point(37, 58);
+            idCourseLabel.Location = new System.Drawing.Point(197, 45);
             idCourseLabel.Name = "idCourseLabel";
             idCourseLabel.Size = new System.Drawing.Size(50, 13);
             idCourseLabel.TabIndex = 2;
@@ -138,7 +140,7 @@
             // idStudentLabel
             // 
             idStudentLabel.AutoSize = true;
-            idStudentLabel.Location = new System.Drawing.Point(20, 84);
+            idStudentLabel.Location = new System.Drawing.Point(180, 71);
             idStudentLabel.Name = "idStudentLabel";
             idStudentLabel.Size = new System.Drawing.Size(67, 13);
             idStudentLabel.TabIndex = 4;
@@ -147,7 +149,7 @@
             // idTeacherLabel
             // 
             idTeacherLabel.AutoSize = true;
-            idTeacherLabel.Location = new System.Drawing.Point(12, 110);
+            idTeacherLabel.Location = new System.Drawing.Point(172, 97);
             idTeacherLabel.Name = "idTeacherLabel";
             idTeacherLabel.Size = new System.Drawing.Size(75, 13);
             idTeacherLabel.TabIndex = 6;
@@ -156,7 +158,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(466, 23);
+            label1.Location = new System.Drawing.Point(9, 8);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(56, 13);
             label1.TabIndex = 9;
@@ -165,7 +167,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(466, 148);
+            label2.Location = new System.Drawing.Point(9, 135);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(60, 13);
             label2.TabIndex = 11;
@@ -174,11 +176,20 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(466, 301);
+            label3.Location = new System.Drawing.Point(9, 289);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(40, 13);
             label3.TabIndex = 13;
             label3.Text = "Курси:";
+            // 
+            // idListLabel
+            // 
+            idListLabel.AutoSize = true;
+            idListLabel.Location = new System.Drawing.Point(178, 18);
+            idListLabel.Name = "idListLabel";
+            idListLabel.Size = new System.Drawing.Size(69, 13);
+            idListLabel.TabIndex = 23;
+            idListLabel.Text = "Id навчання:";
             // 
             // listOfStudyingBindingNavigator
             // 
@@ -204,7 +215,7 @@
             this.toolStripLabel1,
             this.toolStripButton1,
             this.toolStripSeparator2});
-            this.listOfStudyingBindingNavigator.Location = new System.Drawing.Point(93, 0);
+            this.listOfStudyingBindingNavigator.Location = new System.Drawing.Point(9, 433);
             this.listOfStudyingBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.listOfStudyingBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.listOfStudyingBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -223,6 +234,16 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // listOfStudyingBindingSource
+            // 
+            this.listOfStudyingBindingSource.DataMember = "ListOfStudying";
+            this.listOfStudyingBindingSource.DataSource = this.dataSet3;
+            // 
+            // dataSet3
+            // 
+            this.dataSet3.DataSetName = "DataSet3";
+            this.dataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -347,16 +368,44 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.listOfStudyingDataGridView.DataSource = this.listOfStudyingBindingSource;
-            this.listOfStudyingDataGridView.Location = new System.Drawing.Point(14, 133);
+            this.listOfStudyingDataGridView.Location = new System.Drawing.Point(13, 120);
             this.listOfStudyingDataGridView.Name = "listOfStudyingDataGridView";
             this.listOfStudyingDataGridView.ReadOnly = true;
             this.listOfStudyingDataGridView.Size = new System.Drawing.Size(449, 220);
             this.listOfStudyingDataGridView.TabIndex = 1;
             // 
+            // IdList
+            // 
+            this.IdList.DataPropertyName = "IdList";
+            this.IdList.HeaderText = "Id навчання";
+            this.IdList.Name = "IdList";
+            this.IdList.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "IdCourse";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Id курсу";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "IdStudent";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Id студента";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "IdTeacher";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Id викладача";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
             // idCourseTextBox
             // 
             this.idCourseTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listOfStudyingBindingSource, "IdCourse", true));
-            this.idCourseTextBox.Location = new System.Drawing.Point(93, 55);
+            this.idCourseTextBox.Location = new System.Drawing.Point(253, 42);
             this.idCourseTextBox.Name = "idCourseTextBox";
             this.idCourseTextBox.Size = new System.Drawing.Size(100, 20);
             this.idCourseTextBox.TabIndex = 3;
@@ -364,7 +413,7 @@
             // idStudentTextBox
             // 
             this.idStudentTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listOfStudyingBindingSource, "IdStudent", true));
-            this.idStudentTextBox.Location = new System.Drawing.Point(93, 81);
+            this.idStudentTextBox.Location = new System.Drawing.Point(253, 68);
             this.idStudentTextBox.Name = "idStudentTextBox";
             this.idStudentTextBox.Size = new System.Drawing.Size(100, 20);
             this.idStudentTextBox.TabIndex = 5;
@@ -372,7 +421,7 @@
             // idTeacherTextBox
             // 
             this.idTeacherTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listOfStudyingBindingSource, "IdTeacher", true));
-            this.idTeacherTextBox.Location = new System.Drawing.Point(93, 107);
+            this.idTeacherTextBox.Location = new System.Drawing.Point(253, 94);
             this.idTeacherTextBox.Name = "idTeacherTextBox";
             this.idTeacherTextBox.Size = new System.Drawing.Size(100, 20);
             this.idTeacherTextBox.TabIndex = 7;
@@ -390,11 +439,51 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.studentsDataGridView.DataSource = this.studentsBindingSource;
-            this.studentsDataGridView.Location = new System.Drawing.Point(469, 43);
+            this.studentsDataGridView.Location = new System.Drawing.Point(12, 28);
             this.studentsDataGridView.Name = "studentsDataGridView";
             this.studentsDataGridView.ReadOnly = true;
             this.studentsDataGridView.Size = new System.Drawing.Size(547, 99);
             this.studentsDataGridView.TabIndex = 8;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdStudent";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id студента";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "FullName";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Повне ім\'я";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Passport";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Паспорт";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "HomeAddress";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Місце проживання";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "PhoneNumber";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Номер телефону";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // studentsBindingSource
+            // 
+            this.studentsBindingSource.DataMember = "Students";
+            this.studentsBindingSource.DataSource = this.dataSet3;
             // 
             // teachersDataGridView
             // 
@@ -410,15 +499,62 @@
             this.dataGridViewTextBoxColumn13,
             this.dataGridViewTextBoxColumn14});
             this.teachersDataGridView.DataSource = this.teachersBindingSource;
-            this.teachersDataGridView.Location = new System.Drawing.Point(469, 164);
+            this.teachersDataGridView.Location = new System.Drawing.Point(12, 151);
             this.teachersDataGridView.Name = "teachersDataGridView";
             this.teachersDataGridView.ReadOnly = true;
             this.teachersDataGridView.Size = new System.Drawing.Size(649, 127);
             this.teachersDataGridView.TabIndex = 10;
             // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "IdTeacher";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Id викладача";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "FullName";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Повне ім\'я";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Passport";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Паспорт";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Identification code";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Ідентифікаційний код";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "HomeAddress";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Місце проживання";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "PhoneNumber";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Номер телефону";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // teachersBindingSource
+            // 
+            this.teachersBindingSource.DataMember = "Teachers";
+            this.teachersBindingSource.DataSource = this.dataSet3;
+            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(386, 409);
+            this.button1.Location = new System.Drawing.Point(387, 364);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 21;
@@ -441,11 +577,18 @@
             this.dataGridViewTextBoxColumn19,
             this.dataGridViewTextBoxColumn20});
             this.coursesDataGridView.DataSource = this.coursesBindingSource;
-            this.coursesDataGridView.Location = new System.Drawing.Point(469, 319);
+            this.coursesDataGridView.Location = new System.Drawing.Point(9, 305);
             this.coursesDataGridView.Name = "coursesDataGridView";
             this.coursesDataGridView.ReadOnly = true;
             this.coursesDataGridView.Size = new System.Drawing.Size(747, 116);
             this.coursesDataGridView.TabIndex = 23;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "IdCourse";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Id курсу";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
             // 
             // IdTeacher
             // 
@@ -454,26 +597,50 @@
             this.IdTeacher.Name = "IdTeacher";
             this.IdTeacher.ReadOnly = true;
             // 
-            // IdList
+            // dataGridViewTextBoxColumn16
             // 
-            this.IdList.DataPropertyName = "IdList";
-            this.IdList.HeaderText = "Id навчання";
-            this.IdList.Name = "IdList";
-            this.IdList.ReadOnly = true;
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "CoursetTitle";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Назва курсу";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
             // 
-            // idListLabel
+            // dataGridViewTextBoxColumn17
             // 
-            idListLabel.AutoSize = true;
-            idListLabel.Location = new System.Drawing.Point(18, 31);
-            idListLabel.Name = "idListLabel";
-            idListLabel.Size = new System.Drawing.Size(69, 13);
-            idListLabel.TabIndex = 23;
-            idListLabel.Text = "Id навчання:";
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "Timetable";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Розклад";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "Duration";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Тривалість курсу";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "DuringOneLesson";
+            this.dataGridViewTextBoxColumn19.HeaderText = "Тривалість одного заняття";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "CourseFee";
+            this.dataGridViewTextBoxColumn20.HeaderText = "Вартість";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.ReadOnly = true;
+            // 
+            // coursesBindingSource
+            // 
+            this.coursesBindingSource.DataMember = "Courses";
+            this.coursesBindingSource.DataSource = this.dataSet3;
             // 
             // idListTextBox
             // 
             this.idListTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listOfStudyingBindingSource, "IdList", true));
-            this.idListTextBox.Location = new System.Drawing.Point(93, 28);
+            this.idListTextBox.Location = new System.Drawing.Point(253, 15);
             this.idListTextBox.Name = "idListTextBox";
             this.idListTextBox.Size = new System.Drawing.Size(100, 20);
             this.idListTextBox.TabIndex = 24;
@@ -491,7 +658,7 @@
             this.idTeacherToolStripLabel,
             this.idTeacherToolStripTextBox,
             this.searchNewLIStToolStripButton});
-            this.searchNewLIStToolStrip.Location = new System.Drawing.Point(469, 0);
+            this.searchNewLIStToolStrip.Location = new System.Drawing.Point(385, 433);
             this.searchNewLIStToolStrip.Name = "searchNewLIStToolStrip";
             this.searchNewLIStToolStrip.Size = new System.Drawing.Size(749, 25);
             this.searchNewLIStToolStrip.TabIndex = 25;
@@ -549,171 +716,6 @@
             this.searchNewLIStToolStripButton.Text = "Пошук";
             this.searchNewLIStToolStripButton.Click += new System.EventHandler(this.searchNewLIStToolStripButton_Click);
             // 
-            // listOfStudyingBindingSource
-            // 
-            this.listOfStudyingBindingSource.DataMember = "ListOfStudying";
-            this.listOfStudyingBindingSource.DataSource = this.dataSet3;
-            // 
-            // dataSet3
-            // 
-            this.dataSet3.DataSetName = "DataSet3";
-            this.dataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "IdCourse";
-            this.dataGridViewTextBoxColumn15.HeaderText = "Id курсу";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "CoursetTitle";
-            this.dataGridViewTextBoxColumn16.HeaderText = "Назва курсу";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "Timetable";
-            this.dataGridViewTextBoxColumn17.HeaderText = "Розклад";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "Duration";
-            this.dataGridViewTextBoxColumn18.HeaderText = "Тривалість курсу";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "DuringOneLesson";
-            this.dataGridViewTextBoxColumn19.HeaderText = "Тривалість одного заняття";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            this.dataGridViewTextBoxColumn19.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "CourseFee";
-            this.dataGridViewTextBoxColumn20.HeaderText = "Вартість";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.ReadOnly = true;
-            // 
-            // coursesBindingSource
-            // 
-            this.coursesBindingSource.DataMember = "Courses";
-            this.coursesBindingSource.DataSource = this.dataSet3;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "IdTeacher";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Id викладача";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "FullName";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Повне ім\'я";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "Passport";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Паспорт";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "Identification code";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Ідентифікаційний код";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "HomeAddress";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Місце проживання";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "PhoneNumber";
-            this.dataGridViewTextBoxColumn14.HeaderText = "Номер телефону";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            // 
-            // teachersBindingSource
-            // 
-            this.teachersBindingSource.DataMember = "Teachers";
-            this.teachersBindingSource.DataSource = this.dataSet3;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdStudent";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id студента";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "FullName";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Повне ім\'я";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Passport";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Паспорт";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "HomeAddress";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Місце проживання";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "PhoneNumber";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Номер телефону";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // studentsBindingSource
-            // 
-            this.studentsBindingSource.DataMember = "Students";
-            this.studentsBindingSource.DataSource = this.dataSet3;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "IdCourse";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Id курсу";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "IdStudent";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Id студента";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "IdTeacher";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Id викладача";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
             // listOfStudyingTableAdapter
             // 
             this.listOfStudyingTableAdapter.ClearBeforeFill = true;
@@ -740,28 +742,39 @@
             // 
             this.teachersTableAdapter.ClearBeforeFill = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.listOfStudyingDataGridView);
+            this.groupBox1.Controls.Add(this.idCourseTextBox);
+            this.groupBox1.Controls.Add(idListLabel);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(idCourseLabel);
+            this.groupBox1.Controls.Add(this.idListTextBox);
+            this.groupBox1.Controls.Add(this.idStudentTextBox);
+            this.groupBox1.Controls.Add(idStudentLabel);
+            this.groupBox1.Controls.Add(this.idTeacherTextBox);
+            this.groupBox1.Controls.Add(idTeacherLabel);
+            this.groupBox1.Location = new System.Drawing.Point(762, 28);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(470, 393);
+            this.groupBox1.TabIndex = 26;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "&Введіть інформацію:";
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1236, 443);
+            this.BackColor = System.Drawing.Color.PaleGreen;
+            this.ClientSize = new System.Drawing.Size(1236, 462);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.searchNewLIStToolStrip);
-            this.Controls.Add(idListLabel);
-            this.Controls.Add(this.idListTextBox);
             this.Controls.Add(this.coursesDataGridView);
-            this.Controls.Add(this.button1);
             this.Controls.Add(label3);
             this.Controls.Add(label2);
             this.Controls.Add(this.teachersDataGridView);
             this.Controls.Add(label1);
             this.Controls.Add(this.studentsDataGridView);
-            this.Controls.Add(idTeacherLabel);
-            this.Controls.Add(this.idTeacherTextBox);
-            this.Controls.Add(idStudentLabel);
-            this.Controls.Add(this.idStudentTextBox);
-            this.Controls.Add(idCourseLabel);
-            this.Controls.Add(this.idCourseTextBox);
-            this.Controls.Add(this.listOfStudyingDataGridView);
             this.Controls.Add(this.listOfStudyingBindingNavigator);
             this.Name = "Form5";
             this.Text = "Навчання";
@@ -769,17 +782,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.listOfStudyingBindingNavigator)).EndInit();
             this.listOfStudyingBindingNavigator.ResumeLayout(false);
             this.listOfStudyingBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listOfStudyingDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentsDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teachersDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coursesDataGridView)).EndInit();
-            this.searchNewLIStToolStrip.ResumeLayout(false);
-            this.searchNewLIStToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listOfStudyingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teachersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listOfStudyingDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teachersDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teachersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coursesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).EndInit();
+            this.searchNewLIStToolStrip.ResumeLayout(false);
+            this.searchNewLIStToolStrip.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -855,5 +870,6 @@
         private System.Windows.Forms.ToolStripLabel idTeacherToolStripLabel;
         private System.Windows.Forms.ToolStripTextBox idTeacherToolStripTextBox;
         private System.Windows.Forms.ToolStripButton searchNewLIStToolStripButton;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
