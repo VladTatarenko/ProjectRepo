@@ -35,10 +35,12 @@
             System.Windows.Forms.Label timetableLabel;
             System.Windows.Forms.Label coursetTitleLabel;
             System.Windows.Forms.Label idCourseLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             System.Windows.Forms.Label idTeacherLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             this.coursesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.coursesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet3 = new DataBase.DataSet3();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -55,6 +57,13 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.coursesDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdTeacher = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.idCourseTextBox = new System.Windows.Forms.TextBox();
             this.coursetTitleTextBox = new System.Windows.Forms.TextBox();
@@ -68,17 +77,8 @@
             this.coursetTitleToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.coursetTitleToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.serachCourseToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.coursesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet3 = new DataBase.DataSet3();
             this.coursesTableAdapter = new DataBase.DataSet3TableAdapters.CoursesTableAdapter();
             this.tableAdapterManager = new DataBase.DataSet3TableAdapters.TableAdapterManager();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdTeacher = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idTeacherTextBox = new System.Windows.Forms.TextBox();
             courseFeeLabel = new System.Windows.Forms.Label();
             duringOneLessonLabel = new System.Windows.Forms.Label();
@@ -89,65 +89,74 @@
             idTeacherLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.coursesBindingNavigator)).BeginInit();
             this.coursesBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.coursesDataGridView)).BeginInit();
-            this.serachCourseToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coursesDataGridView)).BeginInit();
+            this.serachCourseToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // courseFeeLabel
             // 
             courseFeeLabel.AutoSize = true;
-            courseFeeLabel.Location = new System.Drawing.Point(100, 199);
+            courseFeeLabel.Location = new System.Drawing.Point(432, 58);
             courseFeeLabel.Name = "courseFeeLabel";
-            courseFeeLabel.Size = new System.Drawing.Size(53, 13);
+            courseFeeLabel.Size = new System.Drawing.Size(51, 14);
             courseFeeLabel.TabIndex = 19;
             courseFeeLabel.Text = "Вартість:";
             // 
             // duringOneLessonLabel
             // 
             duringOneLessonLabel.AutoSize = true;
-            duringOneLessonLabel.Location = new System.Drawing.Point(6, 173);
+            duringOneLessonLabel.Location = new System.Drawing.Point(606, 16);
             duringOneLessonLabel.Name = "duringOneLessonLabel";
-            duringOneLessonLabel.Size = new System.Drawing.Size(147, 13);
+            duringOneLessonLabel.Size = new System.Drawing.Size(138, 14);
             duringOneLessonLabel.TabIndex = 18;
             duringOneLessonLabel.Text = "Тривалість одного заняття:";
             // 
             // durationLabel
             // 
             durationLabel.AutoSize = true;
-            durationLabel.Location = new System.Drawing.Point(52, 147);
+            durationLabel.Location = new System.Drawing.Point(195, 58);
             durationLabel.Name = "durationLabel";
-            durationLabel.Size = new System.Drawing.Size(101, 13);
+            durationLabel.Size = new System.Drawing.Size(96, 14);
             durationLabel.TabIndex = 17;
             durationLabel.Text = "Тривальсть курсу:";
             // 
             // timetableLabel
             // 
             timetableLabel.AutoSize = true;
-            timetableLabel.Location = new System.Drawing.Point(100, 121);
+            timetableLabel.Location = new System.Drawing.Point(22, 58);
             timetableLabel.Name = "timetableLabel";
-            timetableLabel.Size = new System.Drawing.Size(53, 13);
+            timetableLabel.Size = new System.Drawing.Size(47, 14);
             timetableLabel.TabIndex = 16;
             timetableLabel.Text = "Розклад:";
             // 
             // coursetTitleLabel
             // 
             coursetTitleLabel.AutoSize = true;
-            coursetTitleLabel.Location = new System.Drawing.Point(80, 94);
+            coursetTitleLabel.Location = new System.Drawing.Point(412, 16);
             coursetTitleLabel.Name = "coursetTitleLabel";
-            coursetTitleLabel.Size = new System.Drawing.Size(73, 13);
+            coursetTitleLabel.Size = new System.Drawing.Size(68, 14);
             coursetTitleLabel.TabIndex = 15;
             coursetTitleLabel.Text = "Назва курсу:";
             // 
             // idCourseLabel
             // 
             idCourseLabel.AutoSize = true;
-            idCourseLabel.Location = new System.Drawing.Point(103, 41);
+            idCourseLabel.Location = new System.Drawing.Point(25, 16);
             idCourseLabel.Name = "idCourseLabel";
-            idCourseLabel.Size = new System.Drawing.Size(50, 13);
+            idCourseLabel.Size = new System.Drawing.Size(50, 14);
             idCourseLabel.TabIndex = 14;
             idCourseLabel.Text = "Id курсу:";
+            // 
+            // idTeacherLabel
+            // 
+            idTeacherLabel.AutoSize = true;
+            idTeacherLabel.Location = new System.Drawing.Point(221, 16);
+            idTeacherLabel.Name = "idTeacherLabel";
+            idTeacherLabel.Size = new System.Drawing.Size(69, 14);
+            idTeacherLabel.TabIndex = 27;
+            idTeacherLabel.Text = "Id викладача:";
             // 
             // coursesBindingNavigator
             // 
@@ -173,7 +182,7 @@
             this.toolStripLabel1,
             this.toolStripButton1,
             this.toolStripSeparator2});
-            this.coursesBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.coursesBindingNavigator.Location = new System.Drawing.Point(55, 323);
             this.coursesBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.coursesBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.coursesBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -192,6 +201,16 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // coursesBindingSource
+            // 
+            this.coursesBindingSource.DataMember = "Courses";
+            this.coursesBindingSource.DataSource = this.dataSet3;
+            // 
+            // dataSet3
+            // 
+            this.dataSet3.DataSetName = "DataSet3";
+            this.dataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -319,138 +338,11 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.coursesDataGridView.DataSource = this.coursesBindingSource;
-            this.coursesDataGridView.Location = new System.Drawing.Point(265, 28);
+            this.coursesDataGridView.Location = new System.Drawing.Point(97, 83);
             this.coursesDataGridView.Name = "coursesDataGridView";
             this.coursesDataGridView.ReadOnly = true;
-            this.coursesDataGridView.Size = new System.Drawing.Size(747, 220);
+            this.coursesDataGridView.Size = new System.Drawing.Size(747, 237);
             this.coursesDataGridView.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(184, 225);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "На головну";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // idCourseTextBox
-            // 
-            this.idCourseTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coursesBindingSource, "IdCourse", true));
-            this.idCourseTextBox.Location = new System.Drawing.Point(159, 38);
-            this.idCourseTextBox.Name = "idCourseTextBox";
-            this.idCourseTextBox.Size = new System.Drawing.Size(100, 20);
-            this.idCourseTextBox.TabIndex = 21;
-            // 
-            // coursetTitleTextBox
-            // 
-            this.coursetTitleTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coursesBindingSource, "CoursetTitle", true));
-            this.coursetTitleTextBox.Location = new System.Drawing.Point(159, 91);
-            this.coursetTitleTextBox.Name = "coursetTitleTextBox";
-            this.coursetTitleTextBox.Size = new System.Drawing.Size(100, 20);
-            this.coursetTitleTextBox.TabIndex = 22;
-            // 
-            // timetableTextBox
-            // 
-            this.timetableTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coursesBindingSource, "Timetable", true));
-            this.timetableTextBox.Location = new System.Drawing.Point(159, 118);
-            this.timetableTextBox.Name = "timetableTextBox";
-            this.timetableTextBox.Size = new System.Drawing.Size(100, 20);
-            this.timetableTextBox.TabIndex = 23;
-            // 
-            // durationTextBox
-            // 
-            this.durationTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coursesBindingSource, "Duration", true));
-            this.durationTextBox.Location = new System.Drawing.Point(159, 144);
-            this.durationTextBox.Name = "durationTextBox";
-            this.durationTextBox.Size = new System.Drawing.Size(100, 20);
-            this.durationTextBox.TabIndex = 24;
-            // 
-            // duringOneLessonTextBox
-            // 
-            this.duringOneLessonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coursesBindingSource, "DuringOneLesson", true));
-            this.duringOneLessonTextBox.Location = new System.Drawing.Point(159, 170);
-            this.duringOneLessonTextBox.Name = "duringOneLessonTextBox";
-            this.duringOneLessonTextBox.Size = new System.Drawing.Size(100, 20);
-            this.duringOneLessonTextBox.TabIndex = 25;
-            // 
-            // courseFeeTextBox
-            // 
-            this.courseFeeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coursesBindingSource, "CourseFee", true));
-            this.courseFeeTextBox.Location = new System.Drawing.Point(159, 199);
-            this.courseFeeTextBox.Name = "courseFeeTextBox";
-            this.courseFeeTextBox.Size = new System.Drawing.Size(100, 20);
-            this.courseFeeTextBox.TabIndex = 26;
-            // 
-            // serachCourseToolStrip
-            // 
-            this.serachCourseToolStrip.Dock = System.Windows.Forms.DockStyle.None;
-            this.serachCourseToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.idCourseToolStripLabel,
-            this.idCourseToolStripTextBox,
-            this.coursetTitleToolStripLabel,
-            this.coursetTitleToolStripTextBox,
-            this.serachCourseToolStripButton});
-            this.serachCourseToolStrip.Location = new System.Drawing.Point(380, 0);
-            this.serachCourseToolStrip.Name = "serachCourseToolStrip";
-            this.serachCourseToolStrip.Size = new System.Drawing.Size(396, 25);
-            this.serachCourseToolStrip.TabIndex = 27;
-            this.serachCourseToolStrip.Text = "serachCourseToolStrip";
-            // 
-            // idCourseToolStripLabel
-            // 
-            this.idCourseToolStripLabel.Name = "idCourseToolStripLabel";
-            this.idCourseToolStripLabel.Size = new System.Drawing.Size(54, 22);
-            this.idCourseToolStripLabel.Text = "Id курсу:";
-            // 
-            // idCourseToolStripTextBox
-            // 
-            this.idCourseToolStripTextBox.Name = "idCourseToolStripTextBox";
-            this.idCourseToolStripTextBox.Size = new System.Drawing.Size(100, 25);
-            // 
-            // coursetTitleToolStripLabel
-            // 
-            this.coursetTitleToolStripLabel.Name = "coursetTitleToolStripLabel";
-            this.coursetTitleToolStripLabel.Size = new System.Drawing.Size(76, 22);
-            this.coursetTitleToolStripLabel.Text = "Назва курсу:";
-            // 
-            // coursetTitleToolStripTextBox
-            // 
-            this.coursetTitleToolStripTextBox.Name = "coursetTitleToolStripTextBox";
-            this.coursetTitleToolStripTextBox.Size = new System.Drawing.Size(100, 25);
-            // 
-            // serachCourseToolStripButton
-            // 
-            this.serachCourseToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.serachCourseToolStripButton.Name = "serachCourseToolStripButton";
-            this.serachCourseToolStripButton.Size = new System.Drawing.Size(50, 22);
-            this.serachCourseToolStripButton.Text = "Пошук";
-            this.serachCourseToolStripButton.Click += new System.EventHandler(this.serachCourseToolStripButton_Click);
-            // 
-            // coursesBindingSource
-            // 
-            this.coursesBindingSource.DataMember = "Courses";
-            this.coursesBindingSource.DataSource = this.dataSet3;
-            // 
-            // dataSet3
-            // 
-            this.dataSet3.DataSetName = "DataSet3";
-            this.dataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // coursesTableAdapter
-            // 
-            this.coursesTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CoursesTableAdapter = this.coursesTableAdapter;
-            this.tableAdapterManager.ListOfStudyingTableAdapter = null;
-            this.tableAdapterManager.sqlite_sequenceTableAdapter = null;
-            this.tableAdapterManager.StudentsTableAdapter = null;
-            this.tableAdapterManager.TeachersTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = DataBase.DataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -501,28 +393,137 @@
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
-            // idTeacherLabel
+            // button1
             // 
-            idTeacherLabel.AutoSize = true;
-            idTeacherLabel.Location = new System.Drawing.Point(78, 67);
-            idTeacherLabel.Name = "idTeacherLabel";
-            idTeacherLabel.Size = new System.Drawing.Size(75, 13);
-            idTeacherLabel.TabIndex = 27;
-            idTeacherLabel.Text = "Id викладача:";
+            this.button1.Location = new System.Drawing.Point(784, 47);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 25);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "На головну";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // idCourseTextBox
+            // 
+            this.idCourseTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coursesBindingSource, "IdCourse", true));
+            this.idCourseTextBox.Location = new System.Drawing.Point(81, 13);
+            this.idCourseTextBox.Name = "idCourseTextBox";
+            this.idCourseTextBox.Size = new System.Drawing.Size(100, 20);
+            this.idCourseTextBox.TabIndex = 21;
+            // 
+            // coursetTitleTextBox
+            // 
+            this.coursetTitleTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coursesBindingSource, "CoursetTitle", true));
+            this.coursetTitleTextBox.Location = new System.Drawing.Point(491, 13);
+            this.coursetTitleTextBox.Name = "coursetTitleTextBox";
+            this.coursetTitleTextBox.Size = new System.Drawing.Size(100, 20);
+            this.coursetTitleTextBox.TabIndex = 22;
+            // 
+            // timetableTextBox
+            // 
+            this.timetableTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coursesBindingSource, "Timetable", true));
+            this.timetableTextBox.Location = new System.Drawing.Point(81, 55);
+            this.timetableTextBox.Name = "timetableTextBox";
+            this.timetableTextBox.Size = new System.Drawing.Size(100, 20);
+            this.timetableTextBox.TabIndex = 23;
+            // 
+            // durationTextBox
+            // 
+            this.durationTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coursesBindingSource, "Duration", true));
+            this.durationTextBox.Location = new System.Drawing.Point(302, 55);
+            this.durationTextBox.Name = "durationTextBox";
+            this.durationTextBox.Size = new System.Drawing.Size(100, 20);
+            this.durationTextBox.TabIndex = 24;
+            // 
+            // duringOneLessonTextBox
+            // 
+            this.duringOneLessonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coursesBindingSource, "DuringOneLesson", true));
+            this.duringOneLessonTextBox.Location = new System.Drawing.Point(759, 13);
+            this.duringOneLessonTextBox.Name = "duringOneLessonTextBox";
+            this.duringOneLessonTextBox.Size = new System.Drawing.Size(100, 20);
+            this.duringOneLessonTextBox.TabIndex = 25;
+            // 
+            // courseFeeTextBox
+            // 
+            this.courseFeeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coursesBindingSource, "CourseFee", true));
+            this.courseFeeTextBox.Location = new System.Drawing.Point(491, 55);
+            this.courseFeeTextBox.Name = "courseFeeTextBox";
+            this.courseFeeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.courseFeeTextBox.TabIndex = 26;
+            // 
+            // serachCourseToolStrip
+            // 
+            this.serachCourseToolStrip.Dock = System.Windows.Forms.DockStyle.None;
+            this.serachCourseToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.idCourseToolStripLabel,
+            this.idCourseToolStripTextBox,
+            this.coursetTitleToolStripLabel,
+            this.coursetTitleToolStripTextBox,
+            this.serachCourseToolStripButton});
+            this.serachCourseToolStrip.Location = new System.Drawing.Point(435, 323);
+            this.serachCourseToolStrip.Name = "serachCourseToolStrip";
+            this.serachCourseToolStrip.Size = new System.Drawing.Size(396, 25);
+            this.serachCourseToolStrip.TabIndex = 27;
+            this.serachCourseToolStrip.Text = "serachCourseToolStrip";
+            // 
+            // idCourseToolStripLabel
+            // 
+            this.idCourseToolStripLabel.Name = "idCourseToolStripLabel";
+            this.idCourseToolStripLabel.Size = new System.Drawing.Size(54, 22);
+            this.idCourseToolStripLabel.Text = "Id курсу:";
+            // 
+            // idCourseToolStripTextBox
+            // 
+            this.idCourseToolStripTextBox.Name = "idCourseToolStripTextBox";
+            this.idCourseToolStripTextBox.Size = new System.Drawing.Size(100, 25);
+            // 
+            // coursetTitleToolStripLabel
+            // 
+            this.coursetTitleToolStripLabel.Name = "coursetTitleToolStripLabel";
+            this.coursetTitleToolStripLabel.Size = new System.Drawing.Size(76, 22);
+            this.coursetTitleToolStripLabel.Text = "Назва курсу:";
+            // 
+            // coursetTitleToolStripTextBox
+            // 
+            this.coursetTitleToolStripTextBox.Name = "coursetTitleToolStripTextBox";
+            this.coursetTitleToolStripTextBox.Size = new System.Drawing.Size(100, 25);
+            // 
+            // serachCourseToolStripButton
+            // 
+            this.serachCourseToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.serachCourseToolStripButton.Name = "serachCourseToolStripButton";
+            this.serachCourseToolStripButton.Size = new System.Drawing.Size(50, 22);
+            this.serachCourseToolStripButton.Text = "Пошук";
+            this.serachCourseToolStripButton.Click += new System.EventHandler(this.serachCourseToolStripButton_Click);
+            // 
+            // coursesTableAdapter
+            // 
+            this.coursesTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CoursesTableAdapter = this.coursesTableAdapter;
+            this.tableAdapterManager.ListOfStudyingTableAdapter = null;
+            this.tableAdapterManager.sqlite_sequenceTableAdapter = null;
+            this.tableAdapterManager.StudentsTableAdapter = null;
+            this.tableAdapterManager.TeachersTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = DataBase.DataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // idTeacherTextBox
             // 
             this.idTeacherTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coursesBindingSource, "IdTeacher", true));
-            this.idTeacherTextBox.Location = new System.Drawing.Point(159, 64);
+            this.idTeacherTextBox.Location = new System.Drawing.Point(302, 13);
             this.idTeacherTextBox.Name = "idTeacherTextBox";
             this.idTeacherTextBox.Size = new System.Drawing.Size(100, 20);
             this.idTeacherTextBox.TabIndex = 28;
             // 
             // Form4
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1020, 257);
+            this.BackColor = System.Drawing.Color.Bisque;
+            this.ClientSize = new System.Drawing.Size(868, 359);
             this.Controls.Add(idTeacherLabel);
             this.Controls.Add(this.idTeacherTextBox);
             this.Controls.Add(this.serachCourseToolStrip);
@@ -541,17 +542,18 @@
             this.Controls.Add(idCourseLabel);
             this.Controls.Add(this.coursesDataGridView);
             this.Controls.Add(this.coursesBindingNavigator);
+            this.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Name = "Form4";
             this.Text = "Курси";
             this.Load += new System.EventHandler(this.Form4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.coursesBindingNavigator)).EndInit();
             this.coursesBindingNavigator.ResumeLayout(false);
             this.coursesBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coursesDataGridView)).EndInit();
             this.serachCourseToolStrip.ResumeLayout(false);
             this.serachCourseToolStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
